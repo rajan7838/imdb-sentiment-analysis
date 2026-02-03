@@ -2,76 +2,99 @@ IMDB Movie Review Sentiment Analysis
 
 RNN + TensorFlow + Streamlit
 
-This project performs sentiment analysis on movie reviews using the IMDB dataset provided by Keras.
-A Recurrent Neural Network (RNN) is trained to classify reviews as Positive or Negative, and the model is deployed using Streamlit for real-time predictions.
+This project is about predicting whether a movie review is Positive or Negative using Deep Learning.
+It uses the IMDB movie review dataset from Keras, trains a Recurrent Neural Network (RNN), and deploys the model using Streamlit so users can test it in real time.
 
-🚀 Features
+🚀 What this project does
 
-Uses built-in IMDB dataset (tensorflow.keras.datasets.imdb)
+Takes a movie review as input
+
+Understands the sequence of words
+
+Predicts the sentiment:
+
+😊 Positive
+
+😞 Negative
+
+✨ Features
+
+Uses built-in IMDB dataset from Keras
 
 Text preprocessing with padding
 
-Embedding + SimpleRNN architecture
+Embedding + SimpleRNN model
 
-Binary sentiment prediction (Positive / Negative)
+Binary sentiment classification
 
 Interactive Streamlit web app
 
-Interview-friendly & beginner-friendly code
+Easy to understand and interview-friendly
 
-🧠 Tech Stack
+🧠 Technologies Used
 
 Python
 
 TensorFlow / Keras
 
-RNN (SimpleRNN)
+Recurrent Neural Network (SimpleRNN)
 
 Streamlit
 
 📁 Project Structure
 imdb_sentiment_app/
 │
-├── project.ipynb      # Train RNN model on IMDB dataset
-├── app.py              # Streamlit web application
-├── model.h5            # Trained model
-├── requirements.txt    # Project dependencies
-└── README.md
+├── project.ipynb        # Model training on IMDB dataset
+├── app.py               # Streamlit web application
+├── model.h5             # Trained RNN model
+├── requirements.txt     # Required libraries
+├── README.md
 
-📊 Dataset
+📊 Dataset Information
 
 IMDB Movie Reviews Dataset
 
-50,000 reviews (25k train, 25k test)
+Total 50,000 reviews
+
+25,000 for training
+
+25,000 for testing
 
 Labels:
 
-1 → Positive
+1 → Positive review
 
-0 → Negative
+0 → Negative review
 
-Reviews are already converted into word indices
+Reviews are already converted into numerical word indices
 
-🏗️ Model Architecture
+🏗️ Model Architecture (Simple)
 Embedding Layer
 ↓
 SimpleRNN
 ↓
-Dense (Sigmoid)
+Dense Layer (Sigmoid)
 
+What each layer does
 
-Embedding: Learns word semantics
+Embedding Layer
+Converts word numbers into meaningful vectors
 
-RNN: Captures sequence context
+RNN Layer
+Learns the order and context of words
 
-Dense: Predicts sentiment
+Dense Layer
+Predicts whether the review is positive or negative
 
-▶️ How to Run Locally
-1️⃣ Install dependencies
+▶️ How to Run the Project Locally
+1️⃣ Install required libraries
 pip install -r requirements.txt
 
 2️⃣ Train the model
 python train_model.py
 
-3️⃣ Run Streamlit app
+
+(This step creates model.h5)
+
+3️⃣ Run the Streamlit app
 streamlit run app.py
